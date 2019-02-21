@@ -1,0 +1,14 @@
+ul.social-buttons-dark {
+  @extend ul.social-buttons;
+  li {
+    a {
+      background-color: $primary;
+      &:active,
+      &:focus,
+      &:hover {
+        background-color: darken($primary, 7.5%) !important;
+      }
+    }
+  }
+
+}

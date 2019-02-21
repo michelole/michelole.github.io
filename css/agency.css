@@ -663,11 +663,11 @@ footer ul.quicklinks {
   font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
-ul.social-buttons {
+ul.social-buttons, ul.social-buttons-dark {
   margin-bottom: 0;
 }
 
-ul.social-buttons li a {
+ul.social-buttons li a, ul.social-buttons-dark li a {
   font-size: 20px;
   line-height: 50px;
   display: block;
@@ -681,6 +681,14 @@ ul.social-buttons li a {
   background-color: #212529;
 }
 
-ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
+ul.social-buttons li a:active, ul.social-buttons-dark li a:active, ul.social-buttons li a:focus, ul.social-buttons-dark li a:focus, ul.social-buttons li a:hover, ul.social-buttons-dark li a:hover {
   background-color: #fed136;
+}
+
+ul.social-buttons-dark li a {
+  background-color: #fed136;
+}
+
+ul.social-buttons-dark li a:active, ul.social-buttons-dark li a:focus, ul.social-buttons-dark li a:hover {
+  background-color: #fec810 !important;
 }

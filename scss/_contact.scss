@@ -1,7 +1,7 @@
 // Styling for the contact section
 section#contact {
   background-color: $gray-900;
-  background-image: url('../img/map-image.png');
+  background-image: url('../img/map-image-small.png');
   background-repeat: no-repeat;
   background-position: center;
   .section-heading {
@@ -43,5 +43,15 @@ section#contact {
     font-weight: 700;
     color: $gray-400;
     @include heading-font;
+  }
+}
+@media(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  section#contact {
+    background-image: url('../img/map-image-small@2x.png');
+  }
+}
+@media(min-width:768px) {
+  section#contact {
+    background-image: url('../img/map-image-large.png');
   }
 }

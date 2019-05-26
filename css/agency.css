@@ -167,7 +167,9 @@ img::-moz-selection {
 header.masthead {
   text-align: center;
   color: white;
-  background-image: url("../img/header-bg.jpg");
+  background-image: url("../img/header-bg-small.jpg");
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -213,6 +215,24 @@ header.masthead .intro-text .intro-heading {
     line-height: 75px;
     margin-bottom: 50px;
     font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  header.masthead {
+    background-image: url("../img/header-bg-small@2x.jpg");
+  }
+}
+
+@media (min-width: 768px) {
+  header.masthead {
+    background-image: url("../img/header-bg-large.jpg");
+  }
+}
+
+@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 192dpi) {
+  header.masthead {
+    background-image: url("../img/header-bg-large@2x.jpg");
   }
 }
 
@@ -587,7 +607,7 @@ header.masthead .intro-text .intro-heading {
 
 section#contact {
   background-color: #212529;
-  background-image: url("../img/map-image.png");
+  background-image: url("../img/map-image-small.png");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -641,6 +661,18 @@ section#contact :-ms-input-placeholder {
   font-weight: 700;
   color: #ced4da;
   font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  section#contact {
+    background-image: url("../img/map-image-small@2x.png");
+  }
+}
+
+@media (min-width: 768px) {
+  section#contact {
+    background-image: url("../img/map-image-large.png");
+  }
 }
 
 footer {

@@ -164,28 +164,18 @@ function image() {
             {
                 width: 1440,
                 rename: { suffix: '-large', extname: '.jpg' }
-            }, {
-                width: 2848,    // Do not enlarge
-                rename: { suffix: '-large@2x', extname: '.jpg' }
-            }, {
+            },  // We do not generate @2x images for background
+            {
                 width: 500,
                 rename: { suffix: '-small', extname: '.jpg' }
-            }, {
-                width: 500 * 2,
-                rename: { suffix: '-small@2x', extname: '.jpg' }
             } ],
         'map-image.png': [
             {
                 width: 1440,
                 rename: { suffix: '-large', extname: '.png' }
-            },
-            // Original image is too small for a @2x version
-            {
+            }, {    // We do not generate @2x images for background
                 width: 500,
                 rename: { suffix: '-small', extname: '.png' }
-            }, {
-                width: 500 * 2,
-                rename: { suffix: '-small@2x', extname: '.png' }
             } ]
     };
 

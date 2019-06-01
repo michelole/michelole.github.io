@@ -45,11 +45,6 @@ section#contact {
     @include heading-font;
   }
 }
-@media(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  section#contact {
-    background-image: url('../img/map-image-small@2x.png');
-  }
-}
 @media(min-width:768px) {
   section#contact {
     background-image: url('../img/map-image-large.png');

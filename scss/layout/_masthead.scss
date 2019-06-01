@@ -50,19 +50,8 @@ header.masthead {
     }
   }
 }
-@media(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  header.masthead {
-    background-image: url('../img/header-bg-small@2x.jpg');
-  }
-}
 @media(min-width:768px) {
   header.masthead {
     background-image: url('../img/header-bg-large.jpg');
-  }
-}
-@media(min-width:768px) and (-webkit-min-device-pixel-ratio: 2),
-(min-width:768px) and (min-resolution: 192dpi) {
-  header.masthead {
-    background-image: url('../img/header-bg-large@2x.jpg');
   }
 }

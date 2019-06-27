@@ -60,9 +60,18 @@ h6 {
   }
 }
 
+::-moz-selection {
+  background: #fed136;
+  text-shadow: none;
+}
+
 ::selection {
   background: #fed136;
   text-shadow: none;
+}
+
+img::-moz-selection {
+  background: transparent;
 }
 
 img::selection {

@@ -176,6 +176,20 @@ function image() {
             }, {    // We do not generate @2x images for background
                 width: 500,
                 rename: { suffix: '-small', extname: '.png' }
+            } ],
+        'team/michel.jpg': [    // favicon
+            {
+                width: 16,
+                rename: 'favicon-16.png'
+            }, {
+                width: 32,
+                rename: 'favicon-32.png'
+            }, {
+                width: 180,
+                rename: 'apple-touch-icon.png'
+            }, {
+                width: 192,
+                rename: 'favicon-192.png'
             } ]
     };
 

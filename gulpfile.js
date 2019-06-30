@@ -177,7 +177,7 @@ function image() {
                 width: 500,
                 rename: { suffix: '-small', extname: '.png' }
             } ],
-        'team/michel.jpg': [    // favicon
+        'team/michel.jpg': [    // Favicon
             {
                 width: 16,
                 rename: 'favicon-16.png'
@@ -190,6 +190,9 @@ function image() {
             }, {
                 width: 192,
                 rename: 'favicon-192.png'
+            }, {    // Open Graph
+                width: 1200,
+                rename: 'michel-thumbnail.jpg'
             } ]
     };
 

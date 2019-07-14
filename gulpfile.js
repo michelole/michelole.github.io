@@ -15,6 +15,7 @@ const uglify = require("gulp-uglify");
 const responsive = require('gulp-responsive');
 const removeEmptyLines = require('gulp-remove-empty-lines');
 const sitemap = require('gulp-sitemap');
+const fontawesomeSubset = require('fontawesome-subset');
 
 // Load package.json for banner
 const pkg = require('./package.json');
@@ -132,6 +133,16 @@ function map() {
         .pipe(gulp.dest('.'));
 }
 
+// Fonts task
+function fonts(done) {
+    fontawesomeSubset({
+            solid: ['bars','circle', 'laptop-medical', 'font', 'file-medical-alt', 'plus', 'book-open', 'graduation-cap', 'times'],
+            brands: ['twitter', 'github', 'linkedin-in', 'researchgate'],
+        },
+        'vendor/fontawesome-free/webfonts');
+    done();
+}
+
 // Optimize images task
 function image() {
     const config = {
@@ -233,7 +244,7 @@ function watchFiles() {
 
 // Define complex tasks
 const vendor = gulp.series(clean, modules);
-const build = gulp.series(vendor, gulp.parallel(css, js, image, map));
+const build = gulp.series(vendor, gulp.parallel(css, js, image, map, fonts));
 const watch = gulp.series(build, gulp.parallel(watchFiles, browserSync));
 
 // Export tasks

@@ -13,6 +13,8 @@ const rename = require("gulp-rename");
 const sass = require("gulp-sass");
 const uglify = require("gulp-uglify");
 const responsive = require('gulp-responsive');
+const removeEmptyLines = require('gulp-remove-empty-lines');
+const sitemap = require('gulp-sitemap');
 
 // Load package.json for banner
 const pkg = require('./package.json');
@@ -117,6 +119,19 @@ function js() {
     .pipe(browsersync.stream());
 }
 
+// Sitemap task
+function map() {
+    return gulp
+        .src('*.html', {
+            read: false
+        })
+        .pipe(sitemap({
+            siteUrl: 'https://oleynik.dev',
+        }))
+        .pipe(removeEmptyLines())
+        .pipe(gulp.dest('.'));
+}
+
 // Optimize images task
 function image() {
     const config = {
@@ -218,7 +233,7 @@ function watchFiles() {
 
 // Define complex tasks
 const vendor = gulp.series(clean, modules);
-const build = gulp.series(vendor, gulp.parallel(css, js, image));
+const build = gulp.series(vendor, gulp.parallel(css, js, image, map));
 const watch = gulp.series(build, gulp.parallel(watchFiles, browserSync));
 
 // Export tasks

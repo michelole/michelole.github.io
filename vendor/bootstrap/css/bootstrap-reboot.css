@@ -18,7 +18,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+ figcaption, footer, header, main, nav, section {
   display: block;
 }
 
@@ -37,13 +37,7 @@ body {
   outline: 0 !important;
 }
 
-hr {
-  box-sizing: content-box;
-  height: 0;
-  overflow: visible;
-}
-
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4 {
   margin-top: 0;
   margin-bottom: 0.5rem;
 }
@@ -53,61 +47,23 @@ p {
   margin-bottom: 1rem;
 }
 
-abbr[title],
-abbr[data-original-title] {
-  text-decoration: underline;
-  -webkit-text-decoration: underline dotted;
-  text-decoration: underline dotted;
-  cursor: help;
-  border-bottom: 0;
-  -webkit-text-decoration-skip-ink: none;
-  text-decoration-skip-ink: none;
-}
 
-address {
-  margin-bottom: 1rem;
-  font-style: normal;
-  line-height: inherit;
-}
-
-ol,
-ul,
-dl {
+ul {
   margin-top: 0;
   margin-bottom: 1rem;
 }
 
-ol ol,
-ul ul,
-ol ul,
-ul ol {
+
+ul ul {
   margin-bottom: 0;
 }
 
-dt {
-  font-weight: 700;
-}
 
-dd {
-  margin-bottom: .5rem;
-  margin-left: 0;
-}
-
-blockquote {
-  margin: 0 0 1rem;
-}
-
-b,
 strong {
   font-weight: bolder;
 }
 
-small {
-  font-size: 80%;
-}
-
-sub,
-sup {
+sub {
   position: relative;
   font-size: 75%;
   line-height: 0;
@@ -116,10 +72,6 @@ sup {
 
 sub {
   bottom: -.25em;
-}
-
-sup {
-  top: -.5em;
 }
 
 a {
@@ -147,22 +99,10 @@ a:not([href]):not([tabindex]):focus {
   outline: 0;
 }
 
-pre,
-code,
-kbd,
-samp {
+
+code {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 1em;
-}
-
-pre {
-  margin-top: 0;
-  margin-bottom: 1rem;
-  overflow: auto;
-}
-
-figure {
-  margin: 0 0 1rem;
 }
 
 img {
@@ -175,25 +115,12 @@ svg {
   vertical-align: middle;
 }
 
-table {
-  border-collapse: collapse;
-}
-
 caption {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   color: #6c757d;
   text-align: left;
   caption-side: bottom;
-}
-
-th {
-  text-align: inherit;
-}
-
-label {
-  display: inline-block;
-  margin-bottom: 0.5rem;
 }
 
 button {
@@ -206,10 +133,7 @@ button:focus {
 }
 
 input,
-button,
-select,
-optgroup,
-textarea {
+button {
   margin: 0;
   font-family: inherit;
   font-size: inherit;
@@ -221,13 +145,8 @@ input {
   overflow: visible;
 }
 
-button,
-select {
+button {
   text-transform: none;
-}
-
-select {
-  word-wrap: normal;
 }
 
 button,
@@ -265,18 +184,6 @@ input[type="month"] {
   -webkit-appearance: listbox;
 }
 
-textarea {
-  overflow: auto;
-  resize: vertical;
-}
-
-fieldset {
-  min-width: 0;
-  padding: 0;
-  margin: 0;
-  border: 0;
-}
-
 legend {
   display: block;
   width: 100%;
@@ -287,10 +194,6 @@ legend {
   line-height: inherit;
   color: inherit;
   white-space: normal;
-}
-
-progress {
-  vertical-align: baseline;
 }
 
 [type="number"]::-webkit-inner-spin-button,
@@ -310,15 +213,6 @@ progress {
 ::-webkit-file-upload-button {
   font: inherit;
   -webkit-appearance: button;
-}
-
-output {
-  display: inline-block;
-}
-
-summary {
-  display: list-item;
-  cursor: pointer;
 }
 
 template {

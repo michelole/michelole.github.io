@@ -16,6 +16,7 @@ const responsive = require('gulp-responsive');
 const removeEmptyLines = require('gulp-remove-empty-lines');
 const sitemap = require('gulp-sitemap');
 const fontawesomeSubset = require('fontawesome-subset');
+const purgecss = require('gulp-purgecss')
 
 // Load package.json for banner
 const pkg = require('./package.json');
@@ -143,6 +144,15 @@ function subsetFonts(done) {
     done();
 }
 
+// Purge CSS task
+function purgeCss() {
+    return gulp.src('vendor/**/*.css')
+        .pipe(purgecss({
+            content: ['*.html']
+        }))
+        .pipe(gulp.dest('./vendor'))
+}
+
 // Optimize images task
 function image() {
     const config = {
@@ -243,7 +253,7 @@ function watchFiles() {
 }
 
 // Define complex tasks
-const vendor = gulp.series(clean, modules, subsetFonts);
+const vendor = gulp.series(clean, modules, subsetFonts, purgeCss);
 const build = gulp.series(vendor, gulp.parallel(css, js, image, map));
 const watch = gulp.series(build, gulp.parallel(watchFiles, browserSync));
 

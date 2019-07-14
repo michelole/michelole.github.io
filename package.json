@@ -47,6 +47,7 @@
         "gulp-responsive": "2.12.0",
         "gulp-remove-empty-lines": "^0.1.0",
         "gulp-sitemap": "^7.4.0",
-        "fontawesome-subset": "^0.1.0"
+        "fontawesome-subset": "^0.1.0",
+        "gulp-purgecss": "^1.2.0"
     }
 }

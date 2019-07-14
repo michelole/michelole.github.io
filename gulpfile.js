@@ -134,7 +134,7 @@ function map() {
 }
 
 // Fonts task
-function fonts(done) {
+function subsetFonts(done) {
     fontawesomeSubset({
             solid: ['bars','circle', 'laptop-medical', 'font', 'file-medical-alt', 'plus', 'book-open', 'graduation-cap', 'times'],
             brands: ['twitter', 'github', 'linkedin-in', 'researchgate'],
@@ -243,8 +243,8 @@ function watchFiles() {
 }
 
 // Define complex tasks
-const vendor = gulp.series(clean, modules);
-const build = gulp.series(vendor, gulp.parallel(css, js, image, map, fonts));
+const vendor = gulp.series(clean, modules, subsetFonts);
+const build = gulp.series(vendor, gulp.parallel(css, js, image, map));
 const watch = gulp.series(build, gulp.parallel(watchFiles, browserSync));
 
 // Export tasks

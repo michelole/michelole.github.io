@@ -148,7 +148,9 @@ function subsetFonts(done) {
 function purgeCss() {
     return gulp.src('vendor/**/*.css')
         .pipe(purgecss({
-            content: ['*.html']
+            content: ['*.html'],
+            whitelist: ['collapsing'],  // Used when fading in/out the menu
+            whitelistPatterns: [/modal-/, /show$/], // Used when displaying modals from the portfolio
         }))
         .pipe(gulp.dest('./vendor'))
 }
